@@ -1,8 +1,28 @@
-nouns                   verbs
-Person
-Bike                    use / is working?
-Docking Stations        to release
+# Nouns:
+
++ Person
++ I
++ Bike
++ docking station
++ Person
++ I
++ Bike
++ docking station
+
+# Verbs:
+
++ Use
++ docking
++ release
++ Use
++ working
+
+| Objects  | Messages  |
+|---|---|
+|  Person |   |
+| Bike  | working?   |
+| Docking Station  | release_a_bike  |
 
 
-Bike <-- working? --> true/false
-DockingStation <-- release_bike --> a Bike
++ Bike <-- bike_is_working? --> true/false
++ Docking Station <-- release_a_bike --> A bike
