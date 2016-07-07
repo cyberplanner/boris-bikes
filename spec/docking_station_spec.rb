@@ -20,4 +20,5 @@ describe DockingStation do
     subject.dock_bike(bike)
     expect(subject.bike).to eq bike
   end
+it { expect(subject.bikes_available).to raise_error('no bikes available')}
 end
