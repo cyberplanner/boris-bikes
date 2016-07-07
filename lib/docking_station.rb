@@ -9,13 +9,23 @@ def initialize
 end
 
   def dock(bike)
-    raise 'Docking station is full' if @bikes.length  >= 20
+    raise 'Docking station is full' if full?
     @bikes << bike
   end
 
   def release_bike
-    raise 'No bikes available' if @bikes.empty?
+    raise 'No bikes available' if is_empty?
     @bikes.pop
+  end
+
+private
+
+  def full?
+    true if @bikes.length >= 20
+  end
+
+  def is_empty?
+    true if @bikes.empty?
   end
 
 end

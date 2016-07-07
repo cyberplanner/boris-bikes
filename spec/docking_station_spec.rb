@@ -20,9 +20,8 @@ describe DockingStation do
 
   describe '#release_bike' do
     it "release working bikes" do
-    #bike = Bike.new
-    subject.dock(Bike.new)
-    expect(subject.release_bike).to be_working
+      subject.dock(Bike.new)
+      expect(subject.release_bike).to be_working
   end
 
   it "raises an error" do
