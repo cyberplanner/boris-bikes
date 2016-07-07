@@ -11,6 +11,7 @@ class DockingStation
     @bike = bike
   end
 
-  def bikes_available
+  def no_bikes
+    raise "no bikes available"
   end
 end
