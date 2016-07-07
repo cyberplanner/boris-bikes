@@ -9,10 +9,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
+    fail 'Docking Station is full' unless @bike == nil
     @bike = bike
   end
-
-  # def no_bikes
-  #   raise "no bikes available"
-  # end
 end
