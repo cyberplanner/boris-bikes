@@ -15,7 +15,7 @@ end
 
   def release_bike
     raise 'No bikes available' if @bikes.empty?
-    @bikes.last
+    @bikes.pop
   end
 
 end
