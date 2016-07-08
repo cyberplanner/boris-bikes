@@ -5,19 +5,24 @@ attr_reader :bikes
 def initialize
 @bikes = []
 end
+
   def release_bike
-    if @bikes.count >= 1
-    @bikes.pop(1)
-    else
-      fail 'No bikes available'
-    end
+    raise 'No bikes available' if empty?
+    @bikes.pop
   end
 
-  def dock_bike(bike)
-    if @bikes.count < 20
-      @bikes << bike
-    else
-      raise 'Docking Station is full'
-    end
+  def dock_bike bike
+    raise 'Docking Station is full' if full?
+    @bikes << bike
+  end
+
+  private
+
+  def full?
+     @bikes.count >= 20
+  end
+
+  def empty?
+    @bikes.empty?
   end
 end
